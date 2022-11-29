@@ -1,121 +1,85 @@
-:root {
-  --premiumCard-left-margin: 665px;
-}
-
 body {
-  position: relative;
-  font-family: IBM Plex Sans;
+  max-width: 100%;
+  font-family: "IBM Plex Sans";
+  color: #191826;
 
   background-image: url("assets/bg-main-desktop.png");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: -120px;
 }
-.headerLogo {
+.pattern1 {
   position: absolute;
-  width: 146.09px;
-  height: 32px;
-  left: 50px;
-  top: 61.99px;
-}
-
-.sideDesign {
-  position: absolute;
-  width: 212px;
+  width: 312px;
+  top: -40px;
   height: 468px;
   right: 0%;
-  top: -40px;
+}
+.body {
+  margin: 62px 165px 165px 62px;
+
+  font-weight: 400;
+  font-style: normal;
 }
 
 .slogan {
-  position: absolute;
-  width: 1010px;
+  width: 1000px;
   height: 176px;
-  left: 50px;
-  top: 221px;
+  margin-top: 161px;
 
-  font-family: "IBM Plex Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 88px;
   line-height: 88px;
 
   letter-spacing: -1px;
-
-  color: #191826;
 }
-
-.body1 {
-  position: absolute;
+.details {
   width: 825px;
   height: 102px;
-  left: 50px;
-  top: 437px;
+  margin-top: 40px;
 
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 20px;
   line-height: 34px;
-
-  color: #191826;
-}
-
-.illustration {
-  position: absolute;
-  width: 369px;
-  height: 642;
-  left: 69px;
-  top: 347px;
-}
-
-.phone {
-  position: absolute;
-  width: 312px;
-  height: 642px;
-  left: 69px;
-  top: 347px;
 }
 
 .blackCard {
-  position: absolute;
+  background-color: #191826;
+  border-radius: 25px;
+  display: flex;
+  margin-top: 288px;
   width: 1110px;
   height: 600px;
-  left: 50px;
-  top: 860px;
-
-  background: #191826;
-  border-radius: 12px;
+}
+.illustration {
+  width: 312px;
+  height: 642px;
+  z-index: 3;
+  margin-top: -158px;
+}
+.phone {
+  width: 280px;
+  height: 606px;
+  margin-left: 110px;
 }
 
 .pattern2 {
-  position: absolute;
-  width: 312px;
-  height: 468px;
-  left: 372px;
-  top: 820px;
+  margin-top: -22px;
 }
 
 .premiumCard {
-  position: absolute;
-  height: 625px;
-  left: 608px;
-  width: 446px;
-  top: 950px;
+  background-color: #fa7453;
+  padding: 54px;
+  height: max-content;
+  /* margin-right: 95px; */
+  left: 95px;
+  margin-top: 90px;
 
-  background-color: hsl(12, 94%, 65%);
-  color: #fcfaf9;
   border-radius: 12px;
+  z-index: 3;
 }
 
 .premiumHeader {
-  position: absolute;
   width: 333px;
-  height: 52px;
-  left: var(--premiumCard-left-margin);
-  top: 1008px;
 
-  font-family: "IBM Plex Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
@@ -124,37 +88,21 @@ body {
 }
 
 .premiumDescription {
-  position: absolute;
   width: 333px;
   height: 170px;
-  left: var(--premiumCard-left-margin);
-  top: 1082px;
-
-  font-family: "IBM Plex Sans";
-  font-style: normal;
-  font-weight: 400;
   font-size: 20px;
   line-height: 34px;
+  margin-top: 22px;
 
   color: #fcfaf9;
 }
 
-.premiumCharges {
-  position: absolute;
+.charges {
   width: 165px;
   height: 52px;
-  left: var(--premiumCard-left-margin);
-  top: 1291px;
-}
-.bill {
-  position: absolute;
-  height: 52px;
-  left: 0%;
-  right: 52.12%;
-  top: calc(50% - 52px / 2);
+  margin-top: 39px;
+  margin-bottom: 46px;
 
-  font-family: "IBM Plex Sans";
-  font-style: normal;
   font-weight: 700;
   font-size: 65px;
   line-height: 52px;
@@ -162,310 +110,131 @@ body {
   color: #fcfaf9;
 }
 .period {
-  position: absolute;
   height: 32px;
-  left: 57.58%;
-  right: 0%;
-  top: calc(50% - 32px / 2 - 1px);
 
-  font-family: "IBM Plex Sans";
-  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
 
   letter-spacing: -0.2px;
-
-  color: #fcfaf9;
 }
 
-.iosButton {
-  position: absolute;
-  width: 333px;
-  height: 61px;
-  left: var(--premiumCard-left-margin);
-  top: 1389px;
+.button {
+  display: flex;
+  flex-direction: column;
+}
 
+.iOS {
+  height: 61px;
+  border: none;
+  border-radius: 12px;
   background-color: #191826;
   color: #fcfaf9;
-  border-radius: 15px;
-  border: none;
-}
 
-.iosButton:hover {
-  color: #fcfaf9;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+
+  text-align: center;
+  letter-spacing: -0.18px;
+}
+.iOS:hover {
   background-color: #66e2dc;
 }
 
-.andriodButton {
-  position: absolute;
-  width: 333px;
+.android {
+  margin-top: 16px;
   height: 61px;
-  left: var(--premiumCard-left-margin);
-  top: 1466px;
-
-  border-radius: 15px;
   border: none;
+  border-radius: 12px;
+  background-color: #fcfaf9;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+
+  text-align: center;
+  letter-spacing: -0.18px;
 }
 
-.andriodButton:hover {
+.android:hover {
   background-color: #ffb964;
-  color: #191826;
 }
 
 .footer {
-  /* display: flex;
-  justify-content: space-around; */
-  position: absolute;
-  width: 1110px;
-  height: 79px;
-  left: 50px;
-  top: 1662px;
+  margin-top: 202px;
+  display: flex;
+  flex-basis: 1110px;
+  justify-content: space-between;
 }
-
 .copyright {
-  position: absolute;
-  left: 25.68%;
-  right: 41.35%;
-  top: 0%;
-  bottom: 0%;
+  width: 300px;
 
-  font-family: "IBM Plex Sans";
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-
-  color: #191826;
+}
+.site {
+  font-weight: bold;
 }
 
 .icons {
   display: flex;
   justify-content: space-between;
-  position: absolute;
   width: 100px;
-  height: 20px;
-  left: 1010px;
-  top: 29px;
+  padding: 30px;
 }
+/* .facebook:hover {
+  
+} */
 
-.facebookIcon:hover {
-  fill: #fa7453;
-}
-
-.instagramIcon:hover {
-  fill: #fa7453;
-}
-
-.twitterIcon:hover {
-  fill: #fa7453;
-}
-
-.bottomLogo {
-  position: absolute;
-  width: 146.09px;
-  height: 32px;
-  left: 1.15px;
-  top: -0.01px;
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   body {
-    position: relative;
+    max-width: 100%;
     background-image: url("assets/bg-main-tablet.png");
+    background-repeat: no-repeat;
   }
 
-  .sideDesign {
+  .pattern1 {
     position: absolute;
     width: 266.67px;
     height: 400px;
-    left: 537px;
+    right: 0%;
     top: -32px;
   }
 
-  .headerLogo {
-    position: absolute;
-    left: 39.15px;
+  .body {
+    margin: 62px 39px 85px 33px;
   }
 
   .slogan {
-    position: absolute;
     width: 520px;
     height: 192px;
-    left: 39px;
-    top: 189px;
-
-    font-weight: 700;
     font-size: 64px;
     line-height: 64px;
 
     letter-spacing: -0.727273px;
   }
 
-  .body1 {
-    position: absolute;
-    width: 470px;
+  .details {
+    width: 514px;
     height: 112px;
-    left: 39px;
-    top: 409px;
 
     font-size: 18px;
     line-height: 28px;
   }
 
   .blackCard {
-    position: absolute;
     width: 696px;
-    height: 600px;
-    left: 33px;
-    top: 800px;
-  }
-
-  .pattern2 {
-    position: absolute;
-    width: 280px;
-    height: 420px;
-    left: 262px;
-    top: 769px;
-  }
-
-  .illustration {
-    position: absolute;
-    left: 12px;
-  }
-
-  .phone {
-    position: absolute;
-    left: 87px;
-    top: 300px;
-    width: 270.21px;
-    height: 556px;
-  }
-
-  .premiumCard {
-    position: absolute;
-    width: 399px;
-    height: 546px;
-    left: 275px;
-    top: 950px;
-  }
-
-  .premiumHeader {
-    position: absolute;
-    width: 302px;
-    height: 40px;
-    left: 320px;
-    top: 978px;
-
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .premiumDescription {
-    position: absolute;
-    width: 302px;
-    height: 140px;
-    left: 320px;
-    top: 1030px;
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  .premiumCharges {
-    position: absolute;
-    width: 165px;
-    height: 52px;
-    left: 326px;
-    top: 1206px;
-  }
-
-  .bill {
-    position: absolute;
-    height: 52px;
-    left: 0%;
-    right: 52.12%;
-    top: calc(50% - 52px / 2);
-
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 52px;
-  }
-
-  .period {
-    position: absolute;
-    height: 32px;
-    left: 57.58%;
-    right: 0%;
-    top: calc(50% - 32px / 2 - 1px);
-
-    font-family: "IBM Plex Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-
-    letter-spacing: -0.2px;
-  }
-
-  .iosButton {
-    position: absolute;
-    width: 296px;
-    height: 61px;
-    left: 326px;
-    top: 1300px;
-  }
-
-  .andriodButton {
-    position: absolute;
-    width: 296px;
-    height: 61px;
-    left: 326px;
-    top: 1377px;
+    height: 834px;
   }
 
   .footer {
-    position: absolute;
-    width: 696px;
-    height: 143px;
-    left: 33px;
-    top: 1553px;
-  }
-
-  .bottomLogo {
-    position: absolute;
-    width: 146.09px;
-    height: 32px;
-    left: 1.15px;
-    top: -0.01px;
-  }
-
-  .copyright {
-    position: absolute;
-    left: 0%;
-    right: 47.41%;
-    top: 44.76%;
-    bottom: 0%;
-
-    font-family: "IBM Plex Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-  }
-
-  .icons {
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    left: 596px;
-    top: 94px;
+    margin-top: 202px;
   }
 }
 
-@media screen and (max-width: 376px) {
+/* @media screen and (max-width: 376px) {
   * {
     margin: 0%;
     padding: 0%;
@@ -625,4 +394,4 @@ body {
     left: 24px;
     top: 245px;
   }
-}
+} */
