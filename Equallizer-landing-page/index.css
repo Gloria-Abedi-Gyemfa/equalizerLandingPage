@@ -203,7 +203,6 @@ body {
   .slogan {
     width: 327px;
     height: 144px;
-    margin-top: 136px;
 
     font-weight: 700;
     font-size: 40px;
@@ -215,7 +214,6 @@ body {
   .details {
     width: 327px;
     height: 156px;
-    margin-top: 300px;
 
     font-size: 16px;
     line-height: 26px;
