@@ -217,7 +217,13 @@ svg:hover path {
     max-width: 100%;
   }
 
-  body::before {
+  .body {
+    margin-top: 62px;
+    margin-left: 0%;
+    margin-bottom: 85px;
+  }
+
+  .body::before {
     content: "";
     position: absolute;
     margin-top: -13rem;
@@ -225,12 +231,6 @@ svg:hover path {
     width: 100%;
     height: 100rem;
     background: url("assets/bg-main-tablet.png") no-repeat;
-  }
-
-  .body {
-    margin-top: 62px;
-    margin-left: 0%;
-    margin-bottom: 85px;
   }
 
   .pattern1 {
@@ -268,7 +268,7 @@ svg:hover path {
   }
   .pattern2 {
     position: absolute;
-    left: 320px;
+    left: 30%;
   }
   .premiumCard {
     position: absolute;
