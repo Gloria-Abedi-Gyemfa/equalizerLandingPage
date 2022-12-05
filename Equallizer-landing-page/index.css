@@ -298,7 +298,14 @@ svg:hover path {
 
 /* Mobile View */
 @media (max-width: 412px) {
-  body::before {
+  .pattern1 {
+    display: none;
+  }
+  .body {
+    margin-left: -28px;
+  }
+
+  .body::before {
     content: "";
     position: fixed;
     margin-top: -13rem;
@@ -306,12 +313,6 @@ svg:hover path {
     width: 100%;
     height: 100rem;
     background: url("assets/bg-main-mobile.png") no-repeat;
-  }
-  .pattern1 {
-    display: none;
-  }
-  .body {
-    margin-left: -28px;
   }
 
   .headerLogo {
