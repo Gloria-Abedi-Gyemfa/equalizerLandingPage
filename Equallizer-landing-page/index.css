@@ -1,43 +1,54 @@
-:root {
-  --svgColor: #fa7453;
-}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
 body {
-  max-width: 100%;
+  /* max-width: 100%; */
   font-family: "IBM Plex Sans";
   color: #191826;
-
-  background-image: url("assets/bg-main-desktop.png");
-  background-repeat: no-repeat;
+  position: relative;
+  overflow-x: hidden;
 }
+body::before {
+  content: "";
+  position: absolute;
+  margin-top: -20rem;
+  margin-left: -10rem;
+  width: 100%;
+  height: 100%;
+  background: url("assets/bg-main-desktop.png") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  mix-blend-mode: color-burn;
+}
+
 .pattern1 {
   position: absolute;
-  width: 312px;
+  width: 270px;
   top: -40px;
-  height: 468px;
-  right: 0%;
+  right: 0;
+  z-index: 10;
 }
 .body {
-  margin: 62px 165px 165px 62px;
+  margin: 62px 0px 165px 62px;
 
   font-weight: 400;
   font-style: normal;
 }
 
 .slogan {
-  width: 1000px;
+  width: 60vw;
   height: 176px;
   margin-top: 161px;
 
   font-weight: 700;
-  font-size: 88px;
+  font-size: 78px;
   line-height: 88px;
-
   letter-spacing: -1px;
+  margin-bottom: 1rem;
 }
 .details {
   width: 825px;
   height: 102px;
-  margin-top: 40px;
+  margin-top: 80px;
 
   font-size: 20px;
   line-height: 34px;
@@ -49,8 +60,9 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 288px;
-  width: 1110px;
+  width: 85vw;
   height: 600px;
+  position: relative;
 }
 .illustration {
   width: 312px;
@@ -61,23 +73,26 @@ body {
 .phone {
   width: 280px;
   height: 606px;
-  margin-left: 110px;
+  margin-left: 10%;
 }
 
 .pattern2 {
-  margin-top: -22px;
-  margin-left: -48px;
+  position: absolute;
+  height: 468px;
+  width: 30%;
+  left: 25%;
 }
 
 .premiumCard {
+  position: absolute;
   background-color: #fa7453;
   padding: 54px;
-  width: max-content;
-  height: max-content;
-  margin-top: 90px;
+  right: 0;
+  z-index: 4;
+  margin-right: 5%;
+  margin-top: 120px;
 
   border-radius: 12px;
-  /* z-index: 4; */
 }
 
 .premiumHeader {
@@ -142,6 +157,7 @@ body {
   letter-spacing: -0.18px;
 }
 .iOS:hover {
+  cursor: pointer;
   background-color: #66e2dc;
 }
 
@@ -161,15 +177,17 @@ body {
 }
 
 .android:hover {
+  cursor: pointer;
   background-color: #ffb964;
 }
 
 .footer {
   margin-top: 202px;
   display: flex;
-  flex-basis: 1110px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
 .copyright {
   width: 300px;
 
@@ -188,19 +206,13 @@ body {
   padding: 30px;
 }
 
-.facebook:hover path {
-  fill: var(--svgColor);
+svg:hover path {
+  cursor: pointer;
+  fill: #fa7453;
 }
 
-.instagram:hover path {
-  fill: var(--svgColor);
-}
-
-.twitter:hover path {
-  fill: var(--svgColor);
-}
-
-@media screen and (max-width: 420px) {
+/* Tablet view */
+@media (max-width: 768px) {
   body {
     max-width: 100%;
   }
@@ -208,8 +220,89 @@ body {
   body::before {
     content: "";
     position: absolute;
-    top: -13rem;
-    right: 0rem;
+    margin-top: -13rem;
+    margin-left: -35rem;
+    width: 100%;
+    height: 100rem;
+    background: url("assets/bg-main-tablet.png") no-repeat;
+  }
+
+  .body {
+    margin-top: 62px;
+    margin-left: 0%;
+    margin-bottom: 85px;
+  }
+
+  .pattern1 {
+    position: absolute;
+    width: 266.67px;
+    height: 400px;
+    right: 0%;
+    left: 537px;
+  }
+
+  .headerLogo {
+    margin-left: 39px;
+  }
+  .slogan {
+    font-size: 64px;
+    line-height: 64px;
+    width: 520px;
+    margin-left: 39px;
+  }
+  .details {
+    font-size: 18px;
+    line-height: 28px;
+    width: 514px;
+    margin-left: 39px;
+  }
+
+  .blackCard {
+    width: 696px;
+    height: 600px;
+    margin-left: 18px;
+  }
+
+  .phone {
+    margin-left: 64px;
+  }
+  .pattern2 {
+    position: absolute;
+    left: 320px;
+  }
+  .premiumCard {
+    position: absolute;
+    width: fit-content;
+    z-index: 4;
+    left: 272px;
+  }
+  .premiumHeader {
+    width: 302px;
+
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .premiumDescription {
+    width: 302px;
+
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .button {
+    width: 296px;
+  }
+  .footer {
+    margin-left: 18px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 412px) {
+  body::before {
+    content: "";
+    position: fixed;
+    margin-top: -13rem;
+    margin-right: 0rem;
     width: 100%;
     height: 100rem;
     background: url("assets/bg-main-mobile.png") no-repeat;
@@ -217,70 +310,70 @@ body {
   .pattern1 {
     display: none;
   }
-
   .body {
-    margin: 40px 24px 80px 24px;
+    margin-left: -28px;
   }
 
-  .mainSection {
-    margin-top: -64px;
+  .headerLogo {
+    margin-left: 52px;
   }
 
   .slogan {
     width: 327px;
-    height: 144px;
-
-    font-weight: 700;
     font-size: 40px;
     line-height: 48px;
 
     letter-spacing: -0.454545px;
+    margin-left: 52px;
+    margin-top: 20px;
   }
 
   .details {
     width: 327px;
-    height: 156px;
-
+    margin-left: 52px;
     font-size: 16px;
     line-height: 26px;
+    font-weight: 400;
+    margin-top: 20px;
   }
 
   .blackCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    width: max-content;
-    height: 1024px;
-    left: 0%;
+    width: 412px;
+    height: 600px;
+    margin-top: 224px;
+    left: 0px;
+    right: 0px;
   }
+
+  .illustration {
+    margin-left: 40px;
+  }
+
   .phone {
-    width: 208.97px;
-    height: 430px;
-    margin-left: 80.67px;
+    width: 228.97px;
+    height: 480px;
+    margin-top: 50px;
   }
   .pattern2 {
-    width: 10px;
-    height: 50px;
-    margin-right: 48px;
-    margin-left: 48px;
-    margin-top: -788px;
+    position: absolute;
+    width: 280px;
+    height: 420px;
+    left: 58px;
   }
-
   .premiumCard {
-    margin-left: 0%;
-    padding: 48px 37px 48px 37px;
-    top: 380px;
     width: max-content;
+    left: 0%;
+    top: 50%;
+    margin-right: 0%;
   }
-
+  .premiumHeader {
+    font-size: 32px;
+    line-height: 40px;
+  }
   .premiumDescription {
-    width: 302px;
-    height: 140px;
     font-size: 18px;
     line-height: 28px;
   }
-
   .iOS {
     width: 296px;
     height: 61px;
@@ -291,20 +384,11 @@ body {
   }
 
   .footer {
-    display: flex;
-    flex-direction: column;
-
-    width: 327px;
-    margin-top: 1412px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-  }
-
-  .copyright {
-    margin-top: 32px;
+    margin-top: 500px;
   }
   .icons {
-    padding-left: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -20%;
   }
 }
