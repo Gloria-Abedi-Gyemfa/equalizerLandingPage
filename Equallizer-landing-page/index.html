@@ -16,54 +16,74 @@
     <title>Frontend Mentor | Equalizer landing page</title>
   </head>
   <body>
-    <div class="header">
-      <img src="assets/logo.svg" class="headerLogo" />
-      <img src="assets/bg-pattern-1.svg" class="pattern1" />
-    </div>
+    <header class="header">
+      <div><img src="assets/logo.svg" class="headerLogo" alt="logo" /></div>
+      <div>
+        <img
+          src="assets/bg-pattern-1.svg"
+          class="pattern1"
+          alt="image of a pattern"
+        />
+      </div>
+    </header>
 
-    <div class="article">
-      <div class="slogan">We make your music sound extraordinary.</div>
+    <main>
+      <h1 class="slogan">We make your music sound extraordinary.</h1>
 
-      <div class="details">
+      <p class="details">
         A system audio equalizer specifically designed for Android and iOS.
         Freely tune the way your music sounds with a professional grade
         parametric EQ & volume mixer. Control bass, mids, treble, gain control,
         reverb, and more!
+      </p>
+
+      <div class="blackCardContainer">
+        <div class="blackCard">
+          <img
+            src="assets/illustration-app.png"
+            class="phone"
+            alt="image of phone"
+          />
+          <img
+            src="assets/bg-pattern-2.svg"
+            class="pattern2"
+            alt="image of pattern"
+          />
+
+          <div class="premiumCard">
+            <h2 class="premiumHeader">Premium EQ</h2>
+
+            <p class="premiumDescription">
+              Get expert-level control with a robust equalizer, volume mixer,
+              and spatial audio. Take your listening experience to a whole new
+              level and access all our incredible features!
+            </p>
+
+            <p class="charges">
+              $4
+              <span class="period">/ month</span>
+            </p>
+
+            <button class="iOS" type="submit">
+              <img src="assets/icon-apple.svg" alt="ios icon" /><span>
+                iOS Download</span
+              >
+            </button>
+
+            <p>
+              <button class="android" type="submit">
+                <img src="assets/icon-android.svg" alt="andriod icon" /><span>
+                  Android Download</span
+                >
+              </button>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
 
-    <div class="blackCardContainer">
-      <img src="assets/illustration-app.png" class="phone" />
-      <img src="assets/bg-pattern-2.svg" class="pattern2" />
-      <!-- <div class="blackCard"></div> -->
-
-      <div class="premiumCard">
-        <div class="premiumHeader">Premium EQ</div>
-
-        <div class="premiumDescription">
-          Get expert-level control with a robust equalizer, volume mixer, and
-          spatial audio. Take your listening experience to a whole new level and
-          access all our incredible features!
-        </div>
-
-        <div class="charges">
-          $4
-          <span class="period">/ month</span>
-        </div>
-
-        <div class="button">
-          <button class="iOS">
-            <img src="assets/icon-apple.svg" /><span> iOS Download</span>
-          </button>
-          <button class="android">
-            <img src="assets/icon-android.svg" /><span> Android Download</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="bottomLogo"><img src="assets/logo.svg" /></div>
+    <footer>
+      <div class="bottomLogo"><img src="assets/logo.svg" alt="logo" /></div>
 
       <div class="copyright">
         All rights reserved © Equalizer 2021 Have any problems? Contact us via
@@ -94,6 +114,6 @@
           />
         </svg>
       </div>
-    </div>
+    </footer>
   </body>
 </html>
